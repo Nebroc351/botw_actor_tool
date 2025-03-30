@@ -80,7 +80,7 @@ class UiActorSelect(wx.Dialog):
         return (retCode, actorname)
 
     def OnFilterChar(self, e) -> None:
-        if e.GetKeyCode() == wx.WXK_RETURN:
+        if e.GetKeyCode() in [wx.WXK_RETURN, wx.WXK_NUMPAD_ENTER]:
             self.OnFilter(e)
         else:
             e.Skip()
